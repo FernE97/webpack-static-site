@@ -40,9 +40,11 @@ const cssLoader = {
 const postcssLoader = {
   loader: 'postcss-loader',
   options: {
-    plugins: [
-      require('autoprefixer')(),
-    ],
+    postcssOptions: {
+      plugins: [
+        require('autoprefixer')(),
+      ],
+    },
     sourceMap,
   },
 };
